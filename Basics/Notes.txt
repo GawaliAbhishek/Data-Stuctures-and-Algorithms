@@ -1,0 +1,6 @@
+# for Reverse the number 
+ rev=(rev*10)+num%10;
+ num=num/10;
+
+ # Short Trick for Digits in number
+ log10(num)+1
