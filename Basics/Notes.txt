@@ -4,3 +4,11 @@
 
  # Short Trick for Digits in number
  log10(num)+1
+
+ #left Shift a number it will be multi by 2
+ #right shift a number it will divide by 2  
+
+ #in Binary Search we do start+(end-start) /2  to find middle
+ this is because it may happen that start + end value may exceed the range of int in java
+ it may happen that start and end value are too large that they exceed the range so to avoid
+ that error we have this way to calc mid
