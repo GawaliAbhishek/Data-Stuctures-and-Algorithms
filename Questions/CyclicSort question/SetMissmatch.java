@@ -15,35 +15,32 @@ Output: [2,3]
  */
 public class SetMissmatch {
     public static void main(String[] args) {
-        
+
     }
 
-
     public int[] findErrorNums(int[] nums) {
-        
-        int ans[]=new int[2];
-        int i=0;
-        while(i<nums.length){
-            int cor=nums[i]-1;
 
-            if(nums[cor]!=nums[i]){
-                int temp=nums[i];
-                nums[i]=nums[cor];
-                nums[cor]=temp;
-            }
-            else{
+        int ans[] = new int[2];
+        int i = 0;
+        while (i < nums.length) {
+            int cor = nums[i] - 1;
+
+            if (nums[cor] != nums[i]) {
+                int temp = nums[i];
+                nums[i] = nums[cor];
+                nums[cor] = temp;
+            } else {
                 i++;
             }
         }
 
-        for(int j=0;j<nums.length;j++){
-            if(nums[j]!=j+1){
-                ans[0]=nums[j];
-                ans[1]=j+1;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != j + 1) {
+                ans[0] = nums[j];
+                ans[1] = j + 1;
             }
         }
         return ans;
-        
 
     }
 }

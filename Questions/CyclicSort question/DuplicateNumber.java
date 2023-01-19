@@ -15,33 +15,31 @@ Output: 2
  */
 public class DuplicateNumber {
 
-
     public static void main(String[] args) {
-        
+
     }
 
     public int findDuplicate(int[] nums) {
-        int i=0;
-        while(i<nums.length){
+        int i = 0;
+        while (i < nums.length) {
 
-            if(nums[i]!=i+1){
-            int correct=nums[i]-1;
-            if(nums[correct]!=nums[i]){
-                int temp=nums[i];
-                nums[i]=nums[correct];
-                nums[correct]=temp;
-            }
-            else{
-               return nums[i];
-             }
+            if (nums[i] != i + 1) {
+                int correct = nums[i] - 1;
+                if (nums[correct] != nums[i]) {
+                    int temp = nums[i];
+                    nums[i] = nums[correct];
+                    nums[correct] = temp;
+                } else {
+                    return nums[i];
+                }
             }
 
             else
-            i++;
-            
+                i++;
+
         }
-       
-       return -1;
+
+        return -1;
     }
-    
+
 }
