@@ -1,0 +1,4 @@
+we can use linear search in 2d arrays tarversing in a array and
+complexity will be O(n^2)
+ 
+#when matrix is sorted in a rowwise and column wise sorted 

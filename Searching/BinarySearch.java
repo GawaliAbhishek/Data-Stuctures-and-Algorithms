@@ -1,7 +1,9 @@
+import java.util.Arrays;
+
 public class BinarySearch {
     public static void main(String[] args) {
-        int arr[] = { 9, 8, 7, 6, 5, 4, 4, 3, 2, 1, 0 };
-        System.out.println(OrderAgonosticSearch(arr, 7));
+        int arr[][] = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        System.out.println(Arrays.toString(Binaryin2D(arr, 3)));
     }
 
     public static int Search1(int arr[], int key) {
@@ -57,5 +59,23 @@ public class BinarySearch {
 
         return -1;
 
+    }
+
+    // Matrix for this case is rowwise and column wise sorted 
+    public static int[] Binaryin2D(int arr[][], int key) {
+        if (arr.length == 0)
+            return new int[] { -1, -1 };
+        int s = 0;
+        int e = arr.length - 1;
+        while (s < arr.length && e >= 0) {
+            if (arr[s][e] == key)
+                return new int[] { s, e };
+            else if (arr[s][e] > key) {
+                e--;
+            } else {
+                s++;
+            }
+        }
+        return new int[] { -1, -1 };
     }
 }
