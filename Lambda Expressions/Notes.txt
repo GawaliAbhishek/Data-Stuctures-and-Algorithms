@@ -1,0 +1,72 @@
+Lamda was introduced in java 1.8 
+Lamda Expression is anonymous(unnamed) function
+Function with no name no modifer and no return type is a lambda Expression
+
+Simple function :-   public void m1(){
+                    System.out.pritnln("Hey");
+
+                      }
+
+Lamda function :- ()->{System.out.pritnln("Hey");}
+
+
+Benifits - reduce the num of lines
+* we can use lamda only with functional interface
+we can do functional programing .. means passing function as argument
+calling Api is efficent (like stream api )
+more readable and compatible code 
+
+Rules of Lamda
+if the body of Expression contains only one line then curly braces are optional
+java compiler also inters the data type of the argument given as parameter
+no need to specify data type of the argument. it will refer automaticaly
+
+ex- public void m1(String s){
+    return s.length();
+}
+
+lambda
+(s)->s.length();
+
+how will it refer the type so we will specify it in a Functional interface 
+
+#Functional interface :- if interface contains only one abstract method then it is functional interface
+ex- Runnable ,Callable,Comparable
+
+to call the lambda we need functional interface
+
+lambda is used to implement the functional interface in very simple and short mannner
+
+
+@FunctionalInterface Annotaion is used to make the interface functional
+actullay it is optional to Annotate  as any interface with one abstract method is functional
+but still for convention we can write @FunctionalInterface there
+
+
+now we have a interface with one method in it
+how to use that method
+
+normal - make a class implement that interface overide that method and give implemention of that method
+
+now we wanna use some differnt way
+
+no need to create a class use anonymous class 
+suppose myinter is a interface 
+
+myinter obj=new myinter(){
+    @overide
+    public void name(){
+
+    }
+};
+
+ the content in (){....} is a anonymous class
+ we can make as many as anonymous class and implement that method in differnt ways
+ now use obj.name();
+
+
+ or to implement that method use lamda Expression
+
+ myinter i=()->{System.out.pritnln("Good Morning");}
+
+ i.greet();

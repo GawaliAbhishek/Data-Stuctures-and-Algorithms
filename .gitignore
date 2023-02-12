@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+
+/Backtracking/*.class
+/Basics/*.class
+/Bit Manipulations/*.class
+/Lambda Expressions/*.class
+/Questions/*.class
+/Recursion/*.class
+/Searching/*.class
+/Sorting/*.class
+/Strings/*.class
+
+/.idea
+/.vscode
+/cmake-build-debug
