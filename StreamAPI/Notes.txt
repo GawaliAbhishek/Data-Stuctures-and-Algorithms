@@ -1,0 +1,35 @@
+Stream API was introduced in java 1.8 
+these streams are realted to collection framework.These is diffrent from io stream
+Stream API basically performs bulk opretions and proccess the objects of collection
+Stream reduce the code 
+
+List.of() creates a list of given elements but it is immutable we cannot do add() in it 
+
+list.stream() - is used to get stream instance
+stream has various methods such as map filter which take lambda boolean function 
+.collect is used to collect the filtered elements and collectors.toList() to convert them in list
+
+Stream is also used in group of objects
+example - Arrays class also have .stream() method
+
+Stream.of(arrayy)= will give the stream of that array
+Stream.forEach(e ->{System.out.println(e)}) is used to print all elements in stream
+
+methods to create Stream objects
+
+1. empty Stream
+Stream<Object> s1=Stream.empty();
+
+2.from given some value
+int arr[]={2,4,7,9,1};
+Stream<Integer> s2=Stream.of(arr);
+
+3.from builder pattern
+Stream<Object> s3=Stream.builder().build();
+
+Map method
+
+map method is used to access and perform opretions on every element of the stream
+map doest take boolean predicate it takes the Function and map do not filter the elemet
+perform opretion and return that element
+
