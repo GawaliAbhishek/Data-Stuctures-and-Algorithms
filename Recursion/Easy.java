@@ -1,6 +1,7 @@
 class Easy {
     public static void main(String[] args) {
-        System.out.println(numberodZeros(20003,0));
+        // System.out.println(numberodZeros(20003,0));
+        System.out.println(powerofnum(3, 3));
     }
 
     static void printnum(int n) {
@@ -25,6 +26,13 @@ class Easy {
         printnumBoth(n - 1);
         System.out.println(n);
 
+    }
+
+    static int powerofnum(int a,int b){
+        if(b==0){
+            return 1;
+        }
+        return a * powerofnum(a, b-1);
     }
 
     static int factorial(int n) {

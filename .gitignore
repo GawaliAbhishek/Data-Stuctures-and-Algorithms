@@ -10,7 +10,7 @@
 /Searching/*.class
 /Sorting/*.class
 /Strings/*.class
-
+/ProblemsAndAlgos/*.class
 /.idea
 /.vscode
 /cmake-build-debug

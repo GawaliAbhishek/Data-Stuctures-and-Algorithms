@@ -1,6 +1,9 @@
+
+
 public class Strings {
     public static void main(String[] args) {
-        System.out.println(Question3("capplb"));
+        String s="abba";
+        System.out.println(Palindrome(s,0,s.length()-1));
     }
 
     // remove some charater from string using recursion
@@ -58,5 +61,20 @@ public class Strings {
         else{
             return q.charAt(0)+Question3(q.substring(1));
         }
+    }
+
+
+    // Palindrome String by Recurrsion
+    public static boolean Palindrome(String s,int p1,int p2){
+        if(p1>=p2){
+            return true;
+        }
+
+        if(s.charAt(p1)!=s.charAt(p2))
+        return false;
+        
+        return Palindrome(s, p1+1, p2-1);
+
+        
     }
 }
