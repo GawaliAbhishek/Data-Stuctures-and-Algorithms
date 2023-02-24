@@ -11,6 +11,7 @@
 /Sorting/*.class
 /Strings/*.class
 /ProblemsAndAlgos/*.class
+/StreamAPI/*.class
 /.idea
 /.vscode
 /cmake-build-debug

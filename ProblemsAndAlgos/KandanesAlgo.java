@@ -8,6 +8,9 @@ class KandanesAlgo {
         System.out.println(RealAlgo(arr));
     }
 
+
+    // what if all elemets are -ve
+
     static int RealAlgo(int arr[]) {
         int sum = 0;
         int maxsum = Integer.MIN_VALUE;
