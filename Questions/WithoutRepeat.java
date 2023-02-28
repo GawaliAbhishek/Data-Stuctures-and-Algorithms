@@ -9,35 +9,26 @@ public class WithoutRepeat {
 
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("bbbbb"));
     }
 
     public static int lengthOfLongestSubstring(String s) {
-     
+      StringBuilder builder=new StringBuilder();
+      int max=0;
+      builder.append(s.charAt(0));
+      for(int i=1;i<s.length();i++){
         int sum=0;
-        int maxsum=0;
-        String sub="";
-
-        for (int i = 0; i < s.length()-1; i++) {
-            if(isThere(sub,s.charAt(i))){
-                sub+=s.charAt(i);
-                sum++;
-            }
-            else{
-                sum=0;
-                sub="";
-            }
-            if(sum>maxsum)
-            maxsum=sum;
+        if(!builder.toString().contains(s.charAt(i)+"")){
+            builder.append(s.charAt(i));
+            sum=builder.length();
         }
-        return maxsum;
-    }
-
-    private static boolean isThere(String s,char ch){
-       for(char c:s.toCharArray()){
-        if(c==ch)
-        return false;
-       }
-       return true;
+        else{
+            builder=new StringBuilder();
+            sum=0;
+        }
+        if(sum>max)
+         max=sum;
+      }
+      return max;
     }
 }
