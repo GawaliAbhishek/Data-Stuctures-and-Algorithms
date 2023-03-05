@@ -13,6 +13,7 @@
 /ProblemsAndAlgos/*.class
 /StreamAPI/*.class
 /Hashing/*.class
+/Heap/*.class
 /.idea
 /.vscode
 /cmake-build-debug
