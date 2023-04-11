@@ -1,7 +1,7 @@
 public class MyLinkedList {
 
     Node head;
-
+    ReverseLinkedList service=new ReverseLinkedList();
     public void insert(int value) {
         Node toadd = new Node(value);
         if (head == null){
@@ -26,6 +26,7 @@ public class MyLinkedList {
         }
         System.out.print("]");
     }
+
 
 
 
