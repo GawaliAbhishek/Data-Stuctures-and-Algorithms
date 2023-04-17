@@ -17,6 +17,7 @@
 /Priority Queue/*.class
 /LinkedList/*.class
 /Stack/*.class
+/Queue/*.class
 /.idea
 /.vscode
 /cmake-build-debug
