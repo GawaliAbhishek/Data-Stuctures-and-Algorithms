@@ -27,16 +27,4 @@ public class MaximumNumberofStringPairs {
         }
         return true;
     }
-
-    public int countSeniors(String[] details) {
-        if(details.length==0)
-        return -1;
-        int count=0;
-        for(int i=0;i<details.length;i++ ){
-            int age=details[i].charAt(12)+details[i].charAt(13);
-            if(age>60)
-            count++;
-        }
-        return count;
-    }
 }
