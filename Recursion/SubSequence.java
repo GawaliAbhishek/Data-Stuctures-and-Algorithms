@@ -4,7 +4,7 @@ public class SubSequence {
 
     public static void main(String[] args) {
 
-        System.out.println(subsetOfString3("abc", ""));
+        subsetOfString("bbabcbcab", "");
 
     }
 
