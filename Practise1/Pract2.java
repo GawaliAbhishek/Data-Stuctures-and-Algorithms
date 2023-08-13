@@ -3,10 +3,7 @@ import java.util.Arrays;
 public class Pract2 {
 
     public static void main(String[] args) {
-        int data[] = { 1, 2, 0, 3, 6, 5, 8, 7, 9 };
-        InsertionSort(data);
-        System.out.println(BinarySearch(data, 0));
-        System.out.println(Arrays.toString(data));
+       int data[][]={{},{},{}};
 
     }
 
@@ -17,6 +14,23 @@ public class Pract2 {
                 return i;
         }
         return -1;
+    }
+
+    // Linear Search in 2D array
+
+    static int[] LinearSearch2(int arr[][], int key) {
+        if (arr.length == 0)
+            return new int[] { -1, -1 };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == key)
+                    return new int[] { i, j };
+            }
+        }
+
+        return new int[] { -1, -1 };
+
     }
 
     // Binary Search Algorithm
@@ -65,5 +79,4 @@ public class Pract2 {
         }
     }
 
-    
 }
