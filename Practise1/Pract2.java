@@ -3,7 +3,9 @@ import java.util.Arrays;
 public class Pract2 {
 
     public static void main(String[] args) {
-       int data[][]={{},{},{}};
+        int arr[] = { 4,2,3,5, 1 };
+        CyclicSort(arr);
+        System.out.println(Arrays.toString(arr));
 
     }
 
@@ -52,6 +54,42 @@ public class Pract2 {
         return -1;
     }
 
+    static int OrderAugnasticBinarySearch(int arr[], int key) {
+        if (arr[0] < arr[arr.length - 1]) {
+            int i = 0;
+            int j = arr.length - 1;
+
+            while (i <= j) {
+                int mid = i + (j - i) / 2;
+                if (arr[mid] == key)
+                    return mid;
+
+                if (arr[mid] > key)
+                    j = mid - 1;
+                else
+                    i = mid + 1;
+
+            }
+            return -1;
+        } else {
+            int i = 0;
+            int j = arr.length - 1;
+
+            while (i <= j) {
+                int mid = i + (j - i) / 2;
+                if (arr[mid] == key)
+                    return mid;
+
+                if (arr[mid] < key)
+                    j = mid - 1;
+                else
+                    i = mid + 1;
+
+            }
+            return -1;
+        }
+    }
+
     // bubble Sort
     static void BubbleSort(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
@@ -68,7 +106,7 @@ public class Pract2 {
     // Insertion Sort
     static void InsertionSort(int arr[]) {
         for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j >= i; j--) {
+            for (int j = i + 1; j > 0; j--) {
                 if (arr[j] < arr[j - 1]) {
                     int temp = arr[j - 1];
                     arr[j - 1] = arr[j];
@@ -76,6 +114,40 @@ public class Pract2 {
                 } else
                     break;
             }
+        }
+    }
+
+    // selection Sort
+    static void SelectionSort(int arr[]) {
+        int i = 0;
+        int j = arr.length - 1;
+
+        while (i < j) {
+            int max = findIndexofGretest(arr, i, j);
+            int temp = arr[max];
+            arr[max] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
+
+    }
+
+    private static int findIndexofGretest(int arr[], int s, int e) {
+        int max = 0;
+        for (int i = s; i <= e; i++) {
+            if (arr[i] > arr[max])
+                max = i;
+        }
+        return max;
+    }
+
+    // Cyclic Sort
+    static void CyclicSort(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            int index = arr[i] - 1;
+            int temp = arr[index];
+            arr[index] = arr[i];
+            arr[i] = temp;
         }
     }
 
