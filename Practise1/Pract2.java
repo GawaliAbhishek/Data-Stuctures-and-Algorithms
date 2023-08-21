@@ -4,7 +4,7 @@ public class Pract2 {
 
     public static void main(String[] args) {
         int arr[] = { 4,2,3,5, 1 };
-        CyclicSort(arr);
+        InsertionSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
